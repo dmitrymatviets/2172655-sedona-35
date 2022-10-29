@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Гостиницы Седоны</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="sdn-header">
+  <img class="sdn-header_logo" src="#" width="140" height="70" alt="City of Sedona logo">
+  <nav class="sdn-header_nav">
+    <ul class="sdn-header_list">
+      <li class="sdn-header_item">
+        <a class="sdn-header_link" href="/index.html">Главная</a>
+        <a class="sdn-header_link" href="#">О Седоне</a>
+        <a class="sdn-header_link">Гостиницы</a>
+      </li>
+    </ul>
+    <ul class="sdn-header_list sdn-header_list--user">
+      <li class="sdn-header_item">
+        <a class="sdn-header_link sdn-header_link--search" href="#">
+          <span class="visually-hidden">Поиск</span>
+        </a>
+        <a class="sdn-header_link sdn-header_link--fav" href="#">
+          <span class="visually-hidden">Избранное</span>
+          <span class="sdn-badge">12</span>
+        </a>
+        <a class="sdn-header_link button" href="#">
+          <strong>Хочу сюда!</strong>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="sdn-main">
+  <section class="sdn-block-catalog-search">
+    <h1 class="sdn-block-catalog-search_heading">Гостиницы Седоны</h1>
+    <ul class="sdn-breadcrumbs">
+      <li class="sdn-breadcrumbs_item sdn-breadcrumbs_item--home">
+        <a class="sdn-breadcrumbs_link" href="/index.html">
+          <span class="visually-hidden">Домой</span>
+        </a>
+      </li>
+      <li class="sdn-breadcrumbs_item">
+        <a class="sdn-breadcrumbs_link">Гостиницы</a>
+      </li>
+    </ul>
+    <form class="sdn-search-form" action="https://echo.htmlacademy.ru/" method="get">
+      <h2 class="visually-hidden">Поиск гостиниц</h2>
+      <fieldset class="sdn-search-form_block">
+        <legend class="sdn-search-form_legend">Инфраструктура:</legend>
+        <ul class="sdn-search-form_list">
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="checkbox" name="pool" checked>
+              Бассейн
+            </label>
+          </li>
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="checkbox" name="parking" checked>
+              Парковка
+            </label>
+          </li>
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="checkbox" name="wifi">
+              Wi-Fi
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="sdn-search-form_block">
+        <legend class="sdn-search-form_legend">Тип жилья:</legend>
+        <ul class="sdn-search-form_list">
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="radio" name="type" value="hotel">
+              Отель
+            </label>
+          </li>
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="radio" name="type" value="motel">
+              Мотель
+            </label>
+          </li>
+          <li class="sdn-search-form_item">
+            <label class="sdn-control">
+              <input class="sdn-control_input" type="radio" name="type" value="apartment">
+              Апартаменты
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="sdn-search-form_block">
+        <legend class="sdn-search-form_legend">Стоимость, ₽:</legend>
+
+        <div class="sdn-slider">
+          <ul class="sdn-slider_list">
+            <li class="sdn-slider_item">
+              <label class="sdn-control" for="price-from">от</label>
+              <input class="sdn-control_input" id="price-from" type="number" name="from">
+            </li>
+
+            <li class="sdn-slider_item">
+              <label class="sdn-control" for="price-to">до</label>
+              <input class="sdn-control_input" id="price-to" type="number" name="to">
+            </li>
+          </ul>
+
+          <div class="sdn-slider_range">
+            <label class="visually-hidden" for="from-slider">От</label>
+            <input id="from-slider" type="range" value="0" min="0" max="5000">
+
+            <label class="visually-hidden" for="to-slider">До</label>
+            <input id="to-slider" type="range" value="9000" min="6000" max="12000">
+          </div>
+        </div>
+
+      </fieldset>
+      <fieldset class="sdn-search-form_block">
+        <legend class="visually-hidden">Кнопки для работы формой</legend>
+        <button class="sdn-button" type="submit">
+          <strong>Применить</strong>
+        </button>
+        <button class="sdn-button sdn-button--transparent" type="reset">
+          <strong>Очистить</strong>
+        </button>
+
+      </fieldset>
+
+
+    </form>
+
+  </section>
+
+  <main class="sdn-block-found">
+    <header class="sdn-block-found_header">
+      <h2 class="sdn-block-found_heading">Найдено гостиниц: <span>20</span></h2>
+      <select class="select-control" aria-label="Сортировка">
+        <option value="cheap">Сначала дешёвые</option>
+        <option value="expensive">Сначала дорогие</option>
+      </select>
+
+      <ul class="sdn-block-found_controls">
+        <li class="sdn-block-found_control">
+          <a href="#" class="sdn-button-control">
+            <span class="visually-hidden">Режим карточек</span>
+          </a>
+        </li>
+        <li class="sdn-block-found_control">
+          <a href="#" class="sdn-button-control">
+            <span class="visually-hidden">Режим больших карточек</span>
+          </a>
+        </li>
+        <li class="sdn-block-found_control">
+          <a href="#" class="sdn-button-control">
+            <span class="visually-hidden">Режим списка</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <ul class="sdn-hotel-list">
+      <li class="sdn-hotel-card">
+        <a class="sdn-hotel-link" href="#">
+          <img class="sdn-hotel-image" src="" alt="">
+          <h3 class="sdn-hotel-title">Amara Resort & Spa</h3>
+          <span class="sdn-hotel-type">Гостиница</span>
+          <b class="price">От 4000 ₽</b>
+          <ul class="sdn-hotel-card_controls">
+            <li class="sdn-hotel-card_control">
+              <a href="#" class="sdn-button">
+                <strong>Подробнее</strong>
+              </a>
+            </li>
+            <li class="sdn-hotel-card_control">
+              <a href="#" class="sdn-button">
+                <strong>В избранное</strong>
+              </a>
+            </li>
+            <li class="sdn-hotel-card_control">
+              <span class="sdn-star"></span>
+              <span class="sdn-star"></span>
+              <span class="sdn-star"></span>
+              <span class="sdn-star"></span>
+            </li>
+            <li class="sdn-hotel-card_control">
+              <a href="#" class="sdn-button">
+                <strong>Рейтинг: 5.0</strong>
+              </a>
+            </li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+
+
+    <footer class="sdn-block-found_footer">
+      <nav aria-label="Пагинация">
+        <ul class="sdn-pagination">
+          <li class="sdn-pagination-item">
+            <a href="#" class="sdn-button">
+              <strong>1</strong>
+            </a>
+          </li>
+          <li class="sdn-pagination-item">
+            <a href="#" class="sdn-button">
+              <strong>2</strong>
+            </a>
+          </li>
+          <li class="sdn-pagination-item">
+            <a href="#" class="sdn-button">
+              <strong>3</strong>
+            </a>
+          </li>
+          <li class="sdn-pagination-item">
+            <a href="#" class="sdn-button">
+              <strong>4</strong>
+            </a>
+          </li>
+          <span>...</span>
+          <li class="sdn-pagination-item">
+            <a href="#" class="sdn-button">
+              <strong>10</strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </main>
+
+
+  <section class="sdn-block-subscribe">
+    <h2 class="sdn-block-search_heading">Подпишитесь на рассылку</h2>
+    <p class="Подпишитесь на рассылку_description">Только полезная информация и никакого спама, честное
+      бойскаутское!</p>
+    <form class="sdn-subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+      <p class="sdn-subscribe-form_row">
+        <input type="email" name="email" placeholder="Ваш e-mail" aria-label="Ваш e-mail">
+        <button class="sdb-button sdn-subscribe-form_button " type="submit">
+          <strong>Подписаться</strong>
+        </button>
+      </p>
+    </form>
+  </section>
+</main>
+<footer class="sdn-footer">
+  <ul class="sdn-footer-social">
+    <li class="sdn-footer-social_item">
+      <a class="sdn-footer-social_link sdn-footer-social_link--vk" href="https://vk.com/htmlacademy">
+        <span class="visually-hidden">VK</span>
+      </a>
+    </li>
+    <li class="sdn-footer-social_item">
+      <a class="sdn-footer-social_link sdn-footer-social_link--tlgrm" href="https://t.me/htmlacademy">
+        <span class="visually-hidden">Telegram</span>
+      </a>
+    </li>
+    <li class="sdn-footer-social_item">
+      <a class="sdn-footer-social_link sdn-footer-social_link--youtube"
+         href="https://www.youtube.com/user/htmlacademyru">
+        <span class="visually-hidden">Youtube</span>
+      </a>
+    </li>
+  </ul>
+  <address class="sdn-footer-address">
+    <a class="sdn-footer-address_tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+  </address>
+  <a class="sdn-footer-logo" href="https://htmlacademy.ru/">
+    <img class="sdn-footer-logo_img" src="#" alt="HTMLAcademy" width="115" height="33">
+  </a>
+</footer>
+</body>
+</html>
